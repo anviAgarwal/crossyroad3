@@ -3,25 +3,19 @@ class Car{
         this.x = random([100,210,320,440,550,660,770,880,990,1100,1210]);
         this.y = height-random([150,250,350,950,1050,1150,1750,1850,1950]);
         this.spt = createSprite(this.x,this.y);
-        this.spt.shapeColor = random(["green","blue","red","yellow"]);
-        this.spt.scale=0.5;
-        this.spt.addAnimation("car",carAnimation);
-        this.spt.scale=0.07;
-        
-
+        this.spt.shapeColor = "blue";
+        this.spt.scale=0.05;
+        this.spt.addAnimation("car1",carAnimation2);
+        //change the direction of the car in middle row
         if(this.y==height-250 || this.y==height-1050 || this.y==height-1850)
         {
             speed=-speed;
-            this.spt.addAnimation("car",carAnimation1);
-            this.spt.scale=0.07;
-
+            this.spt.addAnimation("car1",carAnimation1);
         }
         this.spt.velocityX = speed;
+        
     }
-    
    
-    
 }
-
 
 
